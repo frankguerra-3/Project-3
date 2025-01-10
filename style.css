@@ -25,11 +25,12 @@ html {
   background-color: aliceblue;
 }
 
-/* Header Code */
+/* Text Classes */
 H1 {
   font-size: 16 pt;
   color: white;
 }
+
 H2 {
   font-size: 14 pt;
   color: white;
@@ -45,6 +46,7 @@ H2 {
   font-size: 12 pt;
   color: white;
 }
+
 a:link {
   color: #ffc800;
   text-decoration: none;
@@ -62,4 +64,11 @@ a:hover {
 
 a:active {
   text-decoration: underline;
+}
+ul {
+  font-size: 12 pt;
+  color: white;
+}
+li {
+  list-style-type: square;
 }
