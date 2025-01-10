@@ -5,6 +5,7 @@ body {
   margin: 0;
   margin-left: 25px;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 /* Set map, body, and html to 100% of the screen size. */
@@ -18,33 +19,28 @@ html {
 #visual3 {
   height: 250px;
   width: 500px;
-  border-top: #999999;
-  border-bottom: #999999;
-  border-left: #999999;
-  border-right: #999999;
   background-color: aliceblue;
 }
 
 /* Text Classes */
 H1 {
   font-size: 16 pt;
-  color: white;
 }
 
 H2 {
   font-size: 14 pt;
-  color: white;
+}
+
+H3 {
+  font-size: 13 pt;
 }
 
 .subtitle {
   font-size: 10 pt;
-  color: white;
-  
 }
 
 #vis-desc {
   font-size: 12 pt;
-  color: white;
 }
 
 a:link {
@@ -67,7 +63,6 @@ a:active {
 }
 ul {
   font-size: 12 pt;
-  color: white;
 }
 li {
   list-style-type: square;
