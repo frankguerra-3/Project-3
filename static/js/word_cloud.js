@@ -1,20 +1,16 @@
-
-let movieData = [];
+let movieDataCloud = [];
 
 function init() {
   d3.json('static/db/imdb_top_1000.json').then(data => {
-    movieData = data; // Store the data in a global variable
+    movieDataCloud = data; // Store the data in a global variable
 
-
-// Generate the word cloud on initial load
-generateWordCloud(data);  // Generate the word cloud once data is loaded
-}).catch(error => {
-  console.error('Error loading the data:', error);
-});
+    // Generate the word cloud on initial load
+    generateWordCloud(data);  // Generate the word cloud once data is loaded
+  }).catch(error => {
+    console.error('Error loading the data:', error);
+  });
 }
 
-
-    
 // Function to generate the word cloud for genres
 function generateWordCloud(data) {
     console.log("Generating word cloud...");
@@ -68,7 +64,7 @@ function generateWordCloud(data) {
         .attr("transform", d => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")")
         .text(d => d.text);
     }
-  }
+}
 
-  // Initialize and populate the dropdown on page load
+// Initialize and populate the dropdown on page load
 init();
