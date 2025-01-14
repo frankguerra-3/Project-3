@@ -9,48 +9,92 @@
 </head>
 
 <body>
-  <div id="page-hdr">
-    <p id="breadcrumbs">>> home <<<img src="_images/pike-gry.png" height="9px" width="11px">
-      <a href="about.html">about</a></p>
-    <h1>Movie Data Analysis</h1>
-    <p class="subtitle">A product of <a href="about.html">Group 8</a></p>
-  </div>
-  
-  <!-- Data Analysis Visualization #1 -->
-  <div>
-    <h2>Visualization Header 1</h2>
-  </div>
-  <div>
-    <p id="vis-desc">Description of the Visualization #1</p>
-  </div>
-  <div id="visual1"></div>
 
-  <!-- JavaScript file -->
-  <script type="text/javascript" src="logic1.js"></script>
+<!-- Breadcrumbs tool bar -->
 
-    <!-- Data Analysis Visualization #2 -->
-    <div>
-      <h2>Visualization Header 2</h2>
-    </div>
-    <div>
-      <p id="vis-desc">Description of the Visualization #1</p>
-    </div>
-    <div id="visual2"></div>
-  
-    <!-- JavaScript file -->
-    <script type="text/javascript" src="logic2.js"></script>
+<div id="page-hdr">
+  <table id="breadcrumbs">
+    <tr>
+      <td id="link-active">home</td>
+      <td><a href="about.html">about</a></td>
+    </tr>
+  </table>
+  <h1>Movie Data Analysis</h1>
+  <p class="subtitle">A product of <a href="about.html">Group 8</a></p>
+</div>
 
-    <!-- Data Analysis Visualization #3 -->
-  <div>
-    <h2>Visualization Header 3</h2>
-  </div>
-  <div>
-    <p id="vis-desc">Description of the Visualization #1</p>
-  </div>
-  <div id="visual3"></div>
+<!-- Main Content Grid -->
+  <table id="dashboard">
+    <tr>
+      <th>Visualization Header 1</th>
+      <th>Visualization Header 2</th>
+      <th>Visualization Header 3</th>
+    </tr>
+  <tr>
+    <!-- Top Left Cell -->
+    <td width="420">
+      <div id="visual1"></div>
+      
+      <!-- JavaScript file -->
+      <script type="text/javascript" src="logic1.js"></script>
+    </td>
 
-  <!-- JavaScript file -->
-  <script type="text/javascript" src="logic3.js"></script>
+    <!-- Top Middle Cell -->
+    <td width="420">
+        <!-- Data Analysis Visualization #2 -->
+        <div id="visual2"></div>
+        
+        <!-- JavaScript file -->
+        <script type="text/javascript" src="logic2.js"></script>
+    </td>
+
+    <!-- Top Right Cell -->
+    <td width="420">
+        <!-- Data Analysis Visualization #3 -->
+        <div id="visual3"></div>
+        
+        <!-- JavaScript file -->
+        <script type="text/javascript" src="logic3.js"></script>
+    </td>
+  </tr>
+
+  <tr>
+    <th>Visualization Header 4</th>
+    <th>Visualization Header 5</th>
+    <th>Visualization Header 6</th>
+  </tr>
+
+  <tr>
+
+    <!-- Bottom Left Cell -->
+    <td width="420">
+        <!-- Data Analysis Visualization #4 -->
+        <div id="visual4"></div>
+        
+        <!-- JavaScript file -->
+        <script type="text/javascript" src="logic4.js"></script>
+    </td>
+
+    <!-- Bottom Middle Cell -->
+    <td width="420">
+        <!-- Data Analysis Visualization #5 -->
+        <div id="visual5"></div>
+        
+        <!-- JavaScript file -->
+        <script type="text/javascript" src="logic5.js"></script>
+    </td>
+
+    <!-- Bottom Right Cell -->
+    <td width="420">
+        <!-- Data Analysis Visualization #6 -->
+        <div id="visual6"></div>
+        
+        <!-- JavaScript file -->
+        <script type="text/javascript" src="logic6.js"></script>
+    </td>
+  </tr>
+</table>
+
 </body>
 
 </html>
