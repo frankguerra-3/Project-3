@@ -4,14 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Movie Data Analysis With Visualizations (Group 8 - Project 3)</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 
 <body>
   <!-- The div where we'll insert our map -->
   <div id="page-hdr">
-    <p id="breadcrumbs"><a href="index.html">home</a>
-      <img src="_images/pike-gry.png" height="9px" width="11px">>> about <<</p>
+    <table id="breadcrumbs">
+      <tr>
+        <td><a href="index.html">home</a></td>
+        <td id="link-active">about</td>
+      </tr>
+    </table>
     <h1>Movie Data Analysis</h1>
   </div>
   
@@ -22,7 +26,7 @@
       <li>Lavenya Mohanasundaram</li>
       <li>Nicholas Voltin</li>
       <li>Mehmet Cingoz</li>
-      <li>Frank Guerra <a href="https://www.linkedin.com/in/frank-guerra" target="_blank"><img src="_images/In-Blue-Logo.png.original.png" width="12px" height="12px"></a></li>
+      <li>Frank Guerra (<a id="linkedin" href="https://www.linkedin.com/in/frank-guerra" target="_blank">in</a>)</li>
     </ul>
   </div>
   
@@ -30,22 +34,9 @@
   <div>
     <h2>About the Project</h2>
     <h3>Movie Data Analysis (Project 3 - Data Visualization Track)</h3>
-  </div>
-  <div>
-    <p id="vis-desc">Description of the Visualization #1</p>
+    <p id="vis-desc"><a href="proposal.html" target="_blank">Project Proposal</a></p>
   </div>
   
-  <!-- Data Analysis Visualization #3 -->
-  <div>
-    <h2>Visualization Header 3</h2>
-  </div>
-  <div>
-    <p id="vis-desc">Description of the Visualization #1</p>
-  </div>
-  <div id="visual3"></div>
-
-  <!-- JavaScript file -->
-  <script type="text/javascript" src="logic3.js"></script>
 </body>
 
 </html>
