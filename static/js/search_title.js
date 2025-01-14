@@ -66,7 +66,5 @@ function resetFields() {
   document.getElementById("director").value = "";
 }
 
-
-
 // Initialize and populate the dropdown on page load
 init();

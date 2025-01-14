@@ -2,7 +2,7 @@
 body {
   background-color: #000000;
   padding: 0;
-  margin: 0;
+  margin: 10px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
@@ -29,7 +29,8 @@ html {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
-  color: white;
+  color: black;
+  background-color: #ffc800;
 } 
 
 #visual1,
@@ -108,4 +109,89 @@ ul {
 }
 li {
   list-style-type: square;
+}
+
+/* Style for search_title.js */
+/* ==================================================*/
+
+/* Search container for dropdown and search icon using flexbox */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Dropdown styling */
+select {
+  background-color: black;
+  color: #ffc800;
+  font-size: 11pt;
+  padding: 10px;
+  border: 1px solid white;
+  margin: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ffc800;
+}
+
+/* Font Awesome Search Icon Styling */
+.search-icon {
+  font-size: 24px; /* Set icon size */
+  margin-left: 10px; /* Space between dropdown and icon */
+  color: #ffc800;
+  cursor: pointer; /* Makes the icon clickable */
+}
+
+/* Description container styling */
+.description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Textbox styling (Description - textarea) */
+textarea {
+  background-color: black;
+  color: white;
+  font-size: 10pt;
+  padding: 10px;
+  border: 1px solid white;
+  margin: 10px;
+  width: 400px;  /* Increased width */
+  height: 50px; /* Adjusted height for better view */
+  text-align: center;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #ffc800;
+}
+
+/* Placeholder styling */
+textarea::placeholder {
+  color: #ffc800; /* Placeholder text color */
+  text-align: center;
+}
+
+/* Style for word_cloud.js */
+/* ==================================================*/
+#wordcloud {
+  margin: 15px 15px auto;
+  width: 80%;
+  height: 200px;
+  background-color: #000;
+  border: 1px solid #000;
 }

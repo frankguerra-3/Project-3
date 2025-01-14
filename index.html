@@ -5,6 +5,15 @@
   <meta charset="utf-8">
   <title>Movie Industry Analytics (With Visualizations)</title>
 
+  <!-- D3 library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Correct CDN for d3-cloud -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+
+  <!-- Add Font Awesome for icon usage -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
   
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -30,8 +39,8 @@
   <table id="dashboard">
     <tr>
       <th>Visualization Header 1</th>
-      <th>Visualization Header 2</th>
-      <th>Director Gross Earnings</th>
+      <th>MOVIE INFORMATION</th>
+      <th>TOP 20 DIRECTORS GROSS EARNINGS</th>
     </tr>
   <tr>
     <!-- Top Left Cell -->
@@ -44,11 +53,46 @@
 
     <!-- Top Middle Cell -->
     <td width="420">
+
         <!-- Data Analysis Visualization #2 -->
-        <div id="visual2"></div>
-        
-        <!-- JavaScript file -->
-        <script type="text/javascript" src="logic2.js"></script>
+        <script type="text/javascript" src="static/js/search_title.js"></script>
+
+        <div class="search-container">
+          <select id="movieDropdown" onchange="updateTextBox()">
+            <option value="">--Select a Movie--</option>
+          </select>
+          <!-- Font Awesome Search Icon -->
+          <i class="fas fa-search search-icon" onclick="resetFields()"></i>
+        </div>
+      
+        <!-- Text box to display selected movie's description (Overview) -->
+        <div class="description-container">
+          <textarea id="selectedMovie" placeholder="Description:"></textarea>
+        </div>
+      
+         <!-- Text boxes to display selected movie's details -->
+         <div class="details-container">
+          <div>
+            <label>Released Year:</label>
+            <input type="text" id="releasedYear" readonly><br>
+          </div>
+          <div>
+            <label>Runtime:</label>
+            <input type="text" id="runtime" readonly><br>
+          </div>
+          <div>
+            <label>IMDB Rating:</label>
+            <input type="text" id="imdbRating" readonly><br>
+          </div>
+          <div>
+            <label>Genre:</label>
+            <input type="text" id="genre" readonly><br>
+          </div>
+          <div>
+            <label>Director:</label>
+            <input type="text" id="director" readonly><br>
+          </div>
+        </div>
     </td>
 
     <!-- Top Right Cell -->
@@ -65,7 +109,7 @@
 
   <tr>
     <th>Visualization Header 4</th>
-    <th>Visualization Header 5</th>
+    <th>GENRES</th>
     <th>Visualization Header 6</th>
   </tr>
 
@@ -83,19 +127,16 @@
     <!-- Bottom Middle Cell -->
     <td width="420">
         <!-- Data Analysis Visualization #5 -->
-        <div id="visual5"></div>
-        
-        <!-- JavaScript file -->
-        <script type="text/javascript" src="logic5.js"></script>
+        <div id="wordcloud"></div>
     </td>
 
     <!-- Bottom Right Cell -->
     <td width="420">
         <!-- Data Analysis Visualization #6 -->
-        <div id="visual6"></div>
-        
+        <div id="visual5"></div>
+
         <!-- JavaScript file -->
-        <script type="text/javascript" src="logic6.js"></script>
+        <script type="text/javascript" src="static/js/word_cloud.js"></script>
     </td>
   </tr>
 </table>

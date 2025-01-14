@@ -28,8 +28,8 @@ function generateWordCloud(data) {
     }));
   
     // Set up the word cloud layout
-    const width = 800;
-    const height = 400;
+    const width = 420;
+    const height = 210;
   
     // Clear the existing word cloud before re-rendering
     const wordCloudContainer = document.getElementById("wordcloud");
@@ -39,7 +39,7 @@ function generateWordCloud(data) {
     d3.layout.cloud()
       .size([width, height])
       .words(wordCloudData.map(d => ({ text: d.text, size: d.size })))
-      .padding(5) // Space between words
+      .padding(2) // Space between words
       .rotate(0)  // Set to 0 for horizontal words
       .font("Impact") // Choose your preferred font
       .fontSize(d => d.size) // Set word size based on frequency
@@ -59,7 +59,7 @@ function generateWordCloud(data) {
         .enter().append("text")
         .style("font-size", d => d.size + "px")
         .style("font-family", "Impact")
-        .style("fill", "lightblue") // Change word color to light blue
+        .style("fill", "#ffc800") // Change word color to light blue
         .attr("text-anchor", "middle")
         .attr("transform", d => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")")
         .text(d => d.text);
