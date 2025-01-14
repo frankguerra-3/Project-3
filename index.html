@@ -6,6 +6,9 @@
   <title>Movie Industry Analytics (With Visualizations)</title>
 
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 </head>
 
 <body>
@@ -23,12 +26,12 @@
   <p class="subtitle">A product of <a href="about.html">Group 8</a></p>
 </div>
 
-<!-- Main Content Grid -->
+<!-- Main Content Table/Grid -->
   <table id="dashboard">
     <tr>
       <th>Visualization Header 1</th>
       <th>Visualization Header 2</th>
-      <th>Visualization Header 3</th>
+      <th>Director Gross Earnings</th>
     </tr>
   <tr>
     <!-- Top Left Cell -->
@@ -50,11 +53,13 @@
 
     <!-- Top Right Cell -->
     <td width="420">
-        <!-- Data Analysis Visualization #3 -->
-        <div id="visual3"></div>
-        
-        <!-- JavaScript file -->
-        <script type="text/javascript" src="logic3.js"></script>
+      <!-- Data Analysis Visualization #3 -->
+      <label for="director-select">Select a Director:</label>
+      <select id="director-select"></select> 
+      <div id="chart"></div>
+      
+      <!-- JavaScript file -->
+       <script type="text/javascript" src="static/js/logic3.js"></script>
     </td>
   </tr>
 
