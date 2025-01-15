@@ -18,6 +18,8 @@
   
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -45,10 +47,17 @@
   <tr>
     <!-- Top Left Cell -->
     <td width="420">
-      <div id="visual1"></div>
+      <div id="visual4">
+        <h2>IMDb Top 1000 Data Visualizations</h2>
+      
+        <div class="chart-container">
+          <!-- IMDb Ratings Bar Chart -->
+          <div class="chart">
+            <canvas id="imdbRatingsChart"></canvas>
+          </div>
       
       <!-- JavaScript file -->
-      <script type="text/javascript" src="logic1.js"></script>
+      <script type="text/javascript" src="static/js/logic10.js"></script>
     </td>
 
     <!-- Top Middle Cell -->
@@ -118,10 +127,16 @@
     <!-- Bottom Left Cell -->
     <td width="420">
         <!-- Data Analysis Visualization #4 -->
-        <div id="visual4"></div>
+        <div id="visua4">
+          <h2>IMDb Top 1000 Data Visualizations</h2>
+        
+          <div class="chart-container">
+            <!-- IMDb Ratings Bar Chart -->
+            <div class="chart">
+              <canvas id="genreDistributionChart"></canvas>
         
         <!-- JavaScript file -->
-        <script type="text/javascript" src="logic4.js"></script>
+        <script type="text/javascript" src="static/js/logic10.js"></script>
     </td>
 
     <!-- Bottom Middle Cell -->
