@@ -1,0 +1,145 @@
+/* Body styling */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header container to hold logo and title together */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* IMDb Logo styling */
+.logo {
+  width: 120px; /* Adjust width */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.7; /* Set logo transparency */
+  margin-right: 10px; /* Space between logo and title */
+}
+
+/* Movie Data Analysis and Visualization Heading */
+.subtitle {
+  color: white; /* Change color to white */
+  font-size: 2rem; /* Adjust font size */
+  margin-top: 0;
+}
+
+
+/* Subtitle link styling */
+.subtitle a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.subtitle a:hover {
+  text-decoration: underline;
+}
+
+/* New styling for "A product of Group 8" to reduce font size */
+p {
+  font-size: 1rem;  /* Reduce the size of the text */
+  color: white;     /* Set color to white */
+}
+
+/* Search container for dropdown and search icon using flexbox */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Dropdown styling */
+select {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid white;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
+  border-color: yellow;
+}
+
+/* Font Awesome Search Icon Styling */
+.search-icon {
+  font-size: 24px; /* Set icon size */
+  margin-left: 10px; /* Space between dropdown and icon */
+  color: white;
+  cursor: pointer; /* Makes the icon clickable */
+}
+
+/* Description container styling */
+.description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Textbox styling (Description) */
+textarea {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid white;
+  margin: 10px;
+  width: 500px;  /* Increased width */
+  height: 100px; /* Adjusted height for better view */
+  text-align: center;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: yellow;
+}
+
+/* Placeholder styling */
+textarea::placeholder {
+  color: yellow; /* Placeholder text color */
+  text-align: center;
+}
+
+/* Style for the Genre heading */
+.genre-heading {
+  color: white;  /* White text */
+  font-size: 1.5rem;  /* Adjust size */
+  margin-top: 30px;  /* Space above */
+  text-align: center;  /* Center align the heading */
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#wordcloud {
+  margin: 50px auto;
+  width: 80%;
+  height: 400px;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
