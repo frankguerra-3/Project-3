@@ -111,7 +111,7 @@ li {
   list-style-type: square;
 }
 
-/* Style for search_title.js */
+/* Style for logic_titleSearch.js */
 /* ==================================================*/
 
 /* Search container for dropdown and search icon using flexbox */
@@ -186,12 +186,35 @@ textarea::placeholder {
   text-align: center;
 }
 
-/* Style for word_cloud.js */
+/* Style for logic_genreWC.js */
 /* ==================================================*/
 #wordcloud {
   margin: 15px 15px auto;
   width: 80%;
-  height: 200px;
+  height: 500px;
   background-color: #000;
   border: 1px solid #000;
+}
+
+
+/* Style for logic_top10Votes.js */
+/* ==================================================*/
+#chart_top10Votes {
+  width: 100%;
+  height: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Style for logic_top10Genres.js */
+/* ==================================================*/
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+canvas {
+  max-width: 420px;
+  width: 100%;
 }

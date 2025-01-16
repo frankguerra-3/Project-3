@@ -18,6 +18,8 @@
   
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -38,24 +40,25 @@
 <!-- Main Content Table/Grid -->
   <table id="dashboard">
     <tr>
-      <th>Visualization Header 1</th>
+      <th>TOP 10 MOVIES BY VOTES</th>
       <th>MOVIE INFORMATION</th>
       <th>TOP 20 DIRECTORS GROSS EARNINGS</th>
     </tr>
   <tr>
+
     <!-- Top Left Cell -->
     <td width="420">
-      <div id="visual1"></div>
-      
+      <div id="chart_top10Votes"></div>
+
       <!-- JavaScript file -->
-      <script type="text/javascript" src="logic1.js"></script>
+      <script type="text/javascript" src="static/js/logic_top10Votes.js"></script>
     </td>
 
     <!-- Top Middle Cell -->
     <td width="420">
 
         <!-- Data Analysis Visualization #2 -->
-        <script type="text/javascript" src="static/js/search_title.js"></script>
+        <script type="text/javascript" src="static/js/logic_titleSearch.js"></script>
 
         <div class="search-container">
           <select id="movieDropdown" onchange="updateTextBox()">
@@ -103,40 +106,53 @@
       <div id="chart"></div>
       
       <!-- JavaScript file -->
-       <script type="text/javascript" src="static/js/logic3.js"></script>
+       <script type="text/javascript" src="static/js/logic_top20Directors.js"></script>
     </td>
   </tr>
 
   <tr>
-    <th>Visualization Header 4</th>
-    <th>GENRES</th>
-    <th>Visualization Header 6</th>
+    <th>TOP 10 MOVIES BY IMDB RATING</th>
+    <th>GENRE WORD CLOUD</th>
+    <th>GENRE DISTRIBUTION</th>
   </tr>
 
   <tr>
 
     <!-- Bottom Left Cell -->
     <td width="420">
-        <!-- Data Analysis Visualization #4 -->
-        <div id="visual4"></div>
-        
-        <!-- JavaScript file -->
-        <script type="text/javascript" src="logic4.js"></script>
+
+      <!-- Data Analysis Visualization #4 -->
+      <div class="chart-container">
+        <!-- Bar chart for IMDb Ratings -->
+        <canvas id="imdbRatingsChart" height="500"></canvas>
+    </div>
+     
+    <!-- JavaScript file -->
+    <script type="text/javascript" src="static/js/logic_top10IMDB.js"></script>
+    
     </td>
 
     <!-- Bottom Middle Cell -->
     <td width="420">
         <!-- Data Analysis Visualization #5 -->
         <div id="wordcloud"></div>
+
+        <!-- JavaScript file -->
+        <script type="text/javascript" src="static/js/logic_genreWC.js"></script>
     </td>
 
     <!-- Bottom Right Cell -->
     <td width="420">
-        <!-- Data Analysis Visualization #6 -->
-        <div id="visual5"></div>
 
-        <!-- JavaScript file -->
-        <script type="text/javascript" src="static/js/word_cloud.js"></script>
+      <!-- Data Analysis Visualization #6 -->
+      <div class="chart-container">
+          <!-- Pie chart for Genre Distribution -->
+          <canvas id="genreDistributionChart" height="500px"></canvas>
+      </div>
+       
+      <!-- JavaScript file -->
+      <script type="text/javascript" src="static/js/logic_genrePie.js"></script>
+
     </td>
   </tr>
 </table>
