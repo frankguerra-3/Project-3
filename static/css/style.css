@@ -33,18 +33,6 @@ html {
   background-color: #ffc800;
 } 
 
-#visual1,
-#visual2,
-#visual3,
-#visual4,
-#visual5,
-#visual6 {
-  height: 250px;
-  width: 500px;
-  background-color: aliceblue;
-}
-
-/* Text Classes */
 H1 {
   font-size: 16pt;
 }
