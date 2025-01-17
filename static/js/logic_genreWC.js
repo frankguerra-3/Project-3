@@ -15,8 +15,8 @@ function init() {
 function generateWordCloud(data) {
     console.log("Generating word cloud...");
   
-    // Extract genres from the movie data
-    const genres = data.map(movie => movie.Genre).join(' ').split(',').map(d => d.trim());
+    // Extract genres from the movie data (handling multiple genres per movie)
+    const genres = data.flatMap(movie => movie.Genre.split(',').map(d => d.trim())); // Split and clean up genres
   
     // Count the frequency of each genre
     const genreCounts = d3.rollup(genres, v => v.length, d => d);
@@ -35,10 +35,15 @@ function generateWordCloud(data) {
     const wordCloudContainer = document.getElementById("wordcloud");
     wordCloudContainer.innerHTML = "";
   
+    // Set up the scale for font size
+    const sizeScale = d3.scaleLinear()
+        .domain([d3.min(wordCloudData, d => d.size), d3.max(wordCloudData, d => d.size)]) // Input range: smallest to largest size
+        .range([10, 100]); // Output range: minimum and maximum font size in pixels
+  
     // Ensure d3.layout.cloud is correctly called
     d3.layout.cloud()
       .size([width, height])
-      .words(wordCloudData.map(d => ({ text: d.text, size: d.size })))
+      .words(wordCloudData.map(d => ({ text: d.text, size: sizeScale(d.size) }))) // Apply the scaled size
       .padding(2) // Space between words
       .rotate(0)  // Set to 0 for horizontal words
       .font("Impact") // Choose your preferred font
@@ -57,9 +62,9 @@ function generateWordCloud(data) {
       svg.selectAll("text")
         .data(words)
         .enter().append("text")
-        .style("font-size", d => d.size + "px")
+        .style("font-size", d => d.size + "px") // Apply scaled font size
         .style("font-family", "Impact")
-        .style("fill", "#ffc800") // Change word color to light blue
+        .style("fill", "#ffc800") // Change word color to light yellow
         .attr("text-anchor", "middle")
         .attr("transform", d => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")")
         .text(d => d.text);
