@@ -34,7 +34,8 @@ html {
 } 
 
 H1 {
-  font-size: 16pt;
+  font-size: 20pt;
+  text-align: center;
 }
 
 H2 {
@@ -59,10 +60,6 @@ td {
 #link-active {
   background-color: #999;
   color: #000000;
-}
-
-.subtitle {
-  font-size: 10 pt;
 }
 
 #vis-desc {
