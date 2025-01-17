@@ -99,6 +99,7 @@ function updateChart(director, movies) {
         },
         paper_bgcolor: 'black',
         plot_bgcolor: 'black',
+        width: 420
     };
 
     Plotly.newPlot('chart', data, layout);
