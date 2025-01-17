@@ -45,7 +45,7 @@ The **Movie Industry Analytics** project aims to analyze and visualize key trend
 ### 3. Movie Title Search and Information Display
 - **File**: `logic_titleSearch.js`
 - **Functions**:
-  - **`updateTextBox()`**: Updates the textboxes with detailed movie information such as the movie's description, release year, genre, IMDb rating, and director.
+  - **`updateTextBox()`**: Updates the textboxes with detailed movie information such as the movie's description, release year, genre, IMDb rating, poster, and director.
   - **`resetFields()`**: Resets all fields and clears the movie selection when the reset icon is clicked.
   - **Visualization**: This feature allows users to select a movie from a dropdown, view detailed information, and interact with a word cloud that dynamically updates based on the selected movie's genres.
 
@@ -61,7 +61,7 @@ The **Movie Industry Analytics** project aims to analyze and visualize key trend
   - Movies are sorted by the number of votes, and the **top 10 movies** are selected for visualization in a **bar chart**.
   - **Visualization**: A **bar chart** is created using **D3.js**, with movie titles on the Y-axis and votes on the X-axis.
 
-### 6. Top 20 Directors by Gross Earnings
+### 6. Top 20 Directors by Gross Earnings (Bar Chart)
 - **File**: `logic_top20Directors.js`
 - **Functions**:
   - **`createDropdown(data)`**: Creates a dropdown menu for users to select directors based on their total gross earnings.
@@ -70,7 +70,7 @@ The **Movie Industry Analytics** project aims to analyze and visualize key trend
 
 ### User-Driven Interaction:
 The project offers a high level of **user-driven interaction**:
-- **Movie Title Search**: Users can select a movie from a dropdown menu to view its details such as the release year, genre, IMDb rating, and more. The word cloud updates dynamically based on the selected movie’s genre, providing an engaging experience.
+- **Movie Title Search**: Users can select a movie from a dropdown menu to view its details such as the movie's description, release year, genre, IMDb rating, poster, and director. The word cloud updates dynamically based on the selected movie’s genre, providing an engaging experience.
 - **Top 20 Directors by Earnings**: A dropdown menu allows users to choose a director, and the chart is updated to show their movies and earnings, enhancing the personalized experience.
 - **Interactive Visualizations**: All charts and visualizations (pie chart, bar charts, word cloud) are interactive, providing users with an engaging way to explore the data and understand movie industry trends.
 
