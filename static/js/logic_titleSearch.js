@@ -13,7 +13,6 @@ function init() {
       option.text = movie.Series_Title;
       dropdown.appendChild(option);
     });
-
   });
 }
 
@@ -21,6 +20,7 @@ function init() {
 function updateTextBox() {
   const dropdown = document.getElementById("movieDropdown");
   const textBox = document.getElementById("selectedMovie");
+  const posterContainer = document.getElementById("posterContainer");
 
   const selectedMovieTitle = dropdown.value;
 
@@ -37,16 +37,23 @@ function updateTextBox() {
     document.getElementById("genre").value = selectedMovie.Genre;
     document.getElementById("director").value = selectedMovie.Director;
     
+    // Display the poster image
+    posterContainer.innerHTML = `<img src="${selectedMovie.Poster_Link}" alt="Poster of ${selectedMovie.Series_Title}" style="max-width: 100%; height: auto;">`;
+
     // Re-render the word cloud based on the selected movie data
     generateWordCloud(movieData);
   } else {
     textBox.value = ""; // If no movie is selected, clear the text box
+    
     // Clear the additional fields
     document.getElementById("releasedYear").value = "";
     document.getElementById("runtime").value = "";
     document.getElementById("imdbRating").value = "";
     document.getElementById("genre").value = "";
     document.getElementById("director").value = "";
+
+    // Clear the poster image
+    posterContainer.innerHTML = "";
   }
 }
 
@@ -64,6 +71,10 @@ function resetFields() {
   document.getElementById("imdbRating").value = "";
   document.getElementById("genre").value = "";
   document.getElementById("director").value = "";
+  
+  // Clear the poster image
+  const posterContainer = document.getElementById("posterContainer");
+  posterContainer.innerHTML = "";
 }
 
 // Initialize and populate the dropdown on page load
