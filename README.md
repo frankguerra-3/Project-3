@@ -1,6 +1,6 @@
 # Movie Industry Analytics
 
-**Project 3 Deployement Link**: https://frankguerra-3.github.io/Project-3/
+**Project 3 Deployment Link**: https://frankguerra-3.github.io/Project-3/
 
 ## By Group 8 Team Members:
 - **Frank Guerra**
